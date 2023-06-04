@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('bootstrap') %>
+        <style>
+            body {
+                display: flex;
+                min-height: 100vh;
+                flex-direction: column;
+            }
+
+            .content {
+                flex-grow: 1;
+            }
+        </style>
+</head>
+
+<body>
+    <%- include('navbar') %>
+        <div class="container content mt-3 mb-3">
+            <h1>Leadership</h1>
+            <div class="accordion mt-3" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Aggie Coding Club - Workshop Officer OIT
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p><b>5/22 - 12/22</b></p>
+                            <p>
+                                I am currently a Workshops Officer OIT (officer in training). I am designing fun and
+                                useful computer science workshops for the Aggie Coding Club. These workshops will be
+                                held in the Fall 2022 semester.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            TAMU ASLA Website Team - Scrum Master
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p><b>1/22 - 5/22</b></p>
+                            <p>
+                                While working on the TAMU ASLA Wesbite, I served as the scrum master in a team of 6.
+                                Some of my duties included leading the daily stand-ups and the sprint
+                                retrospectives. You can read more about the TAMU ASLA Website on the <a href="/projects"
+                                    class="link-primary">projects
+                                    page</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('footer') %>
+</body>
+
+</html>

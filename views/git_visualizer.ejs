@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include('bootstrap') %>
+    <script src="//unpkg.com/force-graph"></script>
+    <script src="//unpkg.com/element-resize-detector/dist/element-resize-detector.min.js"></script>
+
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      .content {
+        flex-grow: 1;
+      }
+
+      .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #graph {
+        max-height: 400px;
+      }
+    </style>
+</head>
+
+<body>
+  <%- include('navbar') %>
+    <div class="container content mt-3 mb-3">
+      <div class="text-container">
+        <ul>
+          <li>Circle → Commit | Square → Reference</li>
+          <li>Nodes can be grabbed and moved with your cursor.</li>
+        </ul>
+      </div>
+      <div id="graph"></div>
+    </div>
+
+    <script>
+      const Graph = ForceGraph()(document.getElementById("graph"))
+        .nodeCanvasObject((node, ctx) =>
+          nodePaint(
+            node,
+            ["orange", "darkblue", "red", "green", "purple", "maroon"][
+            node.type
+            ],
+            ctx
+          )
+        )
+        .nodePointerAreaPaint(nodePaint)
+        .nodeLabel("hover")
+        .backgroundColor("LemonChiffon")
+        .linkDirectionalArrowLength(6)
+        .linkColor((link) => "black")
+        .onNodeRightClick((node) => {
+          navigator.clipboard.writeText(node.rt_clk);
+        })
+        .graphData({
+          nodes: [
+            {
+              id: "6e22dc219d2badbf8dbfa80d949aa37774b9f9a3",
+              hover: "merged commits",
+              rt_clk: "6e22dc219d2badbf8dbfa80d949aa37774b9f9a3",
+              type: 0,
+            },
+            { id: "branch/master", hover: "master", rt_clk: "master", type: 1 },
+            { id: "HEAD", hover: "HEAD", rt_clk: "HEAD", type: 5 },
+            {
+              id: "be831d07581f71f832ac165d4a175a8fc0a879ee",
+              hover: "commit 4",
+              rt_clk: "be831d07581f71f832ac165d4a175a8fc0a879ee",
+              type: 0,
+            },
+            {
+              id: "65999b419e0ce506fd2b947eaa654219b2b8704c",
+              hover: "commit 3",
+              rt_clk: "65999b419e0ce506fd2b947eaa654219b2b8704c",
+              type: 0,
+            },
+            {
+              id: "9c9e46886eb9211aaedaf5d41fa73861ae7fbf2d",
+              hover: "commit 2",
+              rt_clk: "9c9e46886eb9211aaedaf5d41fa73861ae7fbf2d",
+              type: 0,
+            },
+            {
+              id: "b5a577585367c5cf1cc024a75b512067393759f1",
+              hover: "commit 1",
+              rt_clk: "b5a577585367c5cf1cc024a75b512067393759f1",
+              type: 0,
+            },
+          ],
+          links: [
+            {
+              source: "65999b419e0ce506fd2b947eaa654219b2b8704c",
+              target: "6e22dc219d2badbf8dbfa80d949aa37774b9f9a3",
+            },
+            {
+              source: "be831d07581f71f832ac165d4a175a8fc0a879ee",
+              target: "6e22dc219d2badbf8dbfa80d949aa37774b9f9a3",
+            },
+            {
+              source: "branch/master",
+              target: "6e22dc219d2badbf8dbfa80d949aa37774b9f9a3",
+            },
+            { source: "HEAD", target: "branch/master" },
+            {
+              source: "9c9e46886eb9211aaedaf5d41fa73861ae7fbf2d",
+              target: "be831d07581f71f832ac165d4a175a8fc0a879ee",
+            },
+            {
+              source: "9c9e46886eb9211aaedaf5d41fa73861ae7fbf2d",
+              target: "65999b419e0ce506fd2b947eaa654219b2b8704c",
+            },
+            {
+              source: "b5a577585367c5cf1cc024a75b512067393759f1",
+              target: "9c9e46886eb9211aaedaf5d41fa73861ae7fbf2d",
+            },
+          ],
+        });
+
+      // Handle the message inside the webview
+      window.addEventListener("message", (event) => {
+        let old_graph = Graph.graphData();
+        let new_graph = event.data;
+
+        for (let i = 0; i < new_graph.nodes.length; ++i) {
+          for (let j = 0; j < old_graph.nodes.length; ++j) {
+            if (new_graph.nodes[i].id == old_graph.nodes[j].id) {
+              new_graph.nodes[i].x = old_graph.nodes[j].x;
+              new_graph.nodes[i].y = old_graph.nodes[j].y;
+              new_graph.nodes[i].vx = old_graph.nodes[j].vx;
+              new_graph.nodes[i].vy = old_graph.nodes[j].vy;
+              break;
+            }
+          }
+        }
+
+        Graph.graphData(new_graph);
+      });
+
+      function nodePaint({ hover, type, x, y }, color, ctx) {
+        // commit, branch, tag, stash, remote, head
+        let identifier = ["C", "LB", "T", "S", "RB", "H"];
+        ctx.fillStyle = color;
+
+        [
+          () => {
+            ctx.beginPath();
+            ctx.arc(x, y, 5, 0, 2 * Math.PI, false);
+            ctx.fill();
+          }, // circle
+          () => {
+            ctx.fillRect(x - 6, y - 6, 12, 12);
+            ctx.fillStyle = "white";
+            ctx.font = "6px Sans-Serif";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.fillText(identifier[type], x, y);
+          }, // text box
+        ][type == 0 ? 0 : 1]();
+      }
+
+      // make graph responsive
+      elementResizeDetectorMaker().listenTo(
+        document.getElementById("graph"),
+        (el) => {
+          Graph.width(el.offsetWidth);
+          Graph.height(el.offsetHeight);
+        }
+      );
+    </script>
+    <%- include('footer') %>
+</body>
+
+</html>

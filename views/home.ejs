@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include('bootstrap') %>
+
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      .content {
+        flex-grow: 1;
+      }
+
+      .img-text-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+
+      .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .pranav-pic {
+        max-width: 250px;
+        width: 100%;
+        height: auto;
+        align-self: center;
+      }
+
+      .quote {
+        max-width: 400px;
+      }
+    </style>
+</head>
+
+<body>
+  <%- include('navbar') %>
+    <div class="container mb-3 content img-text-container">
+      <img src="/pranav_pic.jpg" class="rounded pranav-pic mt-3" />
+      <div class="text-container mt-3">
+        <h1 class="text-center">Pranav's Site</h1>
+        <div class="quote text-start">
+          <q>
+            We live on this speck called Earth - think about what you might do,
+            today or tomorrow - and make the most of it.
+          </q>
+          <p class="text-end"><b>- Neil deGrasse Tyson</b></p>
+        </div>
+      </div>
+    </div>
+    <%- include('footer') %>
+</body>
+
+</html>

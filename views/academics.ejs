@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('bootstrap') %>
+        <style>
+            body {
+                display: flex;
+                min-height: 100vh;
+                flex-direction: column;
+            }
+
+            .content {
+                flex-grow: 1;
+            }
+        </style>
+</head>
+
+<body>
+    <%- include('navbar') %>
+        <div class="container content mt-3 mb-3">
+            <h1>Academics</h1>
+            <div class="accordion mt-3" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Texas A&M University - B.S. in Computer Science
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p><b>GPA: 4.0 : 8/19 - 5/23</b></p>
+                            <p>
+                                <b>Classes:</b> Data Structures & Algorithms, Discrete Math, Linear Algebra, Statistics
+                                1-2, Calculus 1-3, Machine Learning, Software Engineering, Computer Organization, Intro
+                                to Computer Systems, Artificial Intelligence, Computer Graphics, Programming Languages,
+                                etc.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            St. Joseph High School
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p><b>Valedictorian, GPA: 4.0 : 8/15 - 5/19</b></p>
+
+                            <p>
+                                <b>Accomplishments:</b> 2019 National Merit Commended Scholar, Varsity Swimmer, Pianist,
+                                AP Scholar, Founder of the Ideas Club, Vice President of the Medical Professionals Club,
+                                Member of National Honor Society, Attended SMS with Baylor College of Medicine,
+                                Volunteer tutored at Fly-by Academic Workshop, Khan academy breakthrough junior
+                                challenge, Participated in UHV Robotics & Engineering Program
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('footer') %>
+</body>
+
+</html>

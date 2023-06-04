@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('bootstrap') %>
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      .content {
+        flex-grow: 1;
+      }
+
+      .iframe-container {
+        max-width: 560px;
+        aspect-ratio: 16 / 9;
+      }
+
+      /* Then style the iframe to fit in the container div with full height and width */
+      .responsive-iframe {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <%- include('navbar') %>
+    <div class="container content mt-3 mb-3">
+      <h1>Projects</h1>
+      <div class="accordion mt-3" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button collapsed shadow-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="false"
+              aria-controls="collapseOne"
+            >
+              Git Visualizer
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <p><b>7/1/22 - 7/3/22</b></p>
+              <p>
+                Git is an incredible tool for anyone who works with files.
+                Essentially, git is a time machine for your files. It allows you
+                to take snapshots of your files at different times. You can then
+                travel through time to different snapshots whenever necessary.
+              </p>
+              <p>
+                One problem with git though is that it is difficult to visualize
+                what each of the commands are doing. This is why I created the
+                <a
+                  href="https://marketplace.visualstudio.com/items?itemName=PranavJain.git-visualizer"
+                  class="link-primary"
+                  target="_blank"
+                  >Git Visualizer</a
+                >
+                , a vs code extension that visualizes git graphs to help you
+                learn about git. The visualization style was inspired by the
+                git-learning game
+                <a
+                  href="https://ohmygit.org/"
+                  class="link-primary"
+                  target="_blank"
+                  >Oh My Git</a
+                >, which I highly recommend.
+              </p>
+              <a
+                class="btn btn-primary shadow-none"
+                href="/git_visualizer"
+                role="button"
+                >Open Interactive Demo</a
+              ><br />
+              <div class="iframe-container">
+                <iframe
+                  class="mt-3 responsive-iframe"
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/JCpiVWqUxvY"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed shadow-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Nand2Tetris HDL Visualizer
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <p><b>5/1/21 - 8/30/21, 12/16/21 - 12/23/21</b></p>
+              <p>
+                The
+                <a
+                  href="https://www.nand2tetris.org/"
+                  class="link-primary"
+                  target="_blank"
+                  >nand2tetris course</a
+                >
+                is a great course in which students build a modern computer from
+                logic gates. One issue though is that there did not exist any
+                tool to generate helpful visualizations of the nand2tetris hdl
+                file, a type of file used to describe the structure of chips. As
+                an honors project for my CSCE 312 class (Computer Organization),
+                I worked remotely in a team of 5 to develop a
+                <a
+                  href="https://github.com/tcheinen/nand2tetris"
+                  class="link-primary"
+                  target="_blank"
+                  >python-based visualizer</a
+                >
+                for nand2tetris hdl files.
+              </p>
+              <p>
+                I later updated the tool by developing it into a
+                <a
+                  href="https://marketplace.visualstudio.com/items?itemName=PranavJain.nand2tetris-hdl-visualizer&ssr=false#overview"
+                  class="link-primary"
+                  target="_blank"
+                  >vscode extension</a
+                >
+                . The extension now has over 100 downloads and has been used by
+                multiple CSCE 312 students.
+              </p>
+              <div class="iframe-container">
+                <iframe
+                  class="responsive-iframe"
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/6lF45ffVOqo"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button
+              class="accordion-button collapsed shadow-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              Blockify
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingThree"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <p><b>1/29/22 - 1/30/22</b></p>
+              <p>
+                One winter, my older brother (a medical student) was discussing
+                a problem that he faces while studying. For his medical exams,
+                he needs to study diagrams. The problem is that to quiz himself
+                on his diagram knowledge, he has to manually cover up the
+                diagram labels by himself or hope that another classmate has
+                already done so. For TAMUhack 2022, my team, inspired by this
+                problem, developed
+                <a
+                  href="https://devpost.com/software/blockify"
+                  class="link-primary"
+                  target="_blank"
+                  >Blockify</a
+                >. This tool can cover labels in diagrams to help students study
+                more effectively for tests.
+              </p>
+              <a
+                class="btn btn-primary shadow-none"
+                href="/blockify"
+                role="button"
+                >Open Interactive Demo</a
+              ><br />
+              <div class="iframe-container">
+                <iframe
+                  class="mt-3 responsive-iframe"
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/Grn75u7d8_Y"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button
+              class="accordion-button collapsed shadow-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFour"
+              aria-expanded="false"
+              aria-controls="collapseFour"
+            >
+              EyeTrain
+            </button>
+          </h2>
+          <div
+            id="collapseFour"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingFour"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <p><b>1/28/21 - 1/31/21</b></p>
+              <p>
+                Due to covid, many individuals have found themselves learning
+                and working remotely. Although remote work is convenient, it is
+                very straining on your eyes to be staring at a computer screen
+                for the entire day. The symptoms for eye strain include
+                headaches and eye pain, among others. For TAMUhack 2021, my
+                team, inspired by this problem, developed
+                <a
+                  href="https://devpost.com/software/eyetrain"
+                  class="link-primary"
+                  target="_blank"
+                  >EyeTrain</a
+                >. This is a game that exercises your eyes through different eye
+                movements and blinking. Our team achieved 2nd place out of 130
+                teams. Each of us received an iPad (8th Generation) as a prize.
+              </p>
+              <div class="iframe-container">
+                <iframe
+                  class="responsive-iframe"
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/OKT_lauYg44"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button
+              class="accordion-button collapsed shadow-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFive"
+              aria-expanded="false"
+              aria-controls="collapseFive"
+            >
+              CoverUp
+            </button>
+          </h2>
+          <div
+            id="collapseFive"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingFive"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <p><b>9/17/20 - 9/30/20</b></p>
+              <p>
+                In many of my classes, I noticed that my teachers were
+                recommending that we use our past quizzes as study material for
+                upcoming exams. One issue though is that studying from quizzes
+                is difficult because the answers are often right next to the
+                question. To address this problem, I developed
+                <a
+                  href="https://chrome.google.com/webstore/detail/coverup/hnmphpcheiijfaegncemlieifeeigbho"
+                  class="link-primary"
+                  target="_blank"
+                  >CoverUp</a
+                >. The tool places rectangles on a user's screen, which can be
+                dragged, resized, deleted, and copied in order to cover answers.
+                I published this tool on the Chrome Web Store as a google
+                extension.
+              </p>
+              <a
+                class="btn btn-primary shadow-none"
+                href="/cover_up"
+                role="button"
+                >Open Interactive Demo</a
+              ><br />
+              <div class="iframe-container">
+                <iframe
+                  class="mt-3 responsive-iframe"
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/S2lhI5uvPwc"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSix">
+            <button
+              class="accordion-button collapsed shadow-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSix"
+              aria-expanded="false"
+              aria-controls="collapseSix"
+            >
+              eCampus CoverUp
+            </button>
+          </h2>
+          <div
+            id="collapseSix"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingSix"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <p><b>11/7/20 - 11/8/20</b></p>
+              <p>
+                While using past eCampus quizzes as study material for upcoming
+                exams, I wished that there was a way to quickly convert the quiz
+                into a practice exam. To solve this problem, I developed
+                <a
+                  href="https://chrome.google.com/webstore/detail/ecampuscoverup/nhighoefkblbildildaonmhkapledjpj"
+                  class="link-primary"
+                  target="_blank"
+                  >eCampus CoverUp</a
+                >. The tool automatically removes the answers from multiple
+                choice questions on eCampus. I published this tool on the Chrome
+                Web Store as a google extension.
+              </p>
+              <div class="iframe-container">
+                <iframe
+                  class="responsive-iframe"
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/S0DKMg2AqfM"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSeven">
+            <button
+              class="accordion-button collapsed shadow-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseSeven"
+              aria-expanded="false"
+              aria-controls="collapseSeven"
+            >
+              TeeRacking
+            </button>
+          </h2>
+          <div
+            id="collapseSeven"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingSeven"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <p><b>1/30/21 - 1/31/21</b></p>
+              <p>
+                When attending Aggies Invent - Facebook, my team of 6 learned
+                about a problem that exists at Facebook. When outages happen at
+                Facebook data centers, technicians need to resolve the problems
+                quickly. Their preferred method for travelling throughout these
+                huge centers is golf carts. One issue is that locating these
+                golf carts can be difficult, and often the carts are out of
+                battery. To solve this issue, my team developed TeeRacking. This
+                product provides information to Facebook employees about nearby,
+                functioning golf carts through an app. Our team achieved 2nd
+                place out of 8 teams. Each of us received $125 as a prize.
+              </p>
+              <div class="iframe-container">
+                <iframe
+                  class="responsive-iframe"
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/_Gr781Z-QiM"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingEight">
+            <button
+              class="accordion-button collapsed shadow-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseEight"
+              aria-expanded="false"
+              aria-controls="collapseEight"
+            >
+              TAMU ASLA Website
+            </button>
+          </h2>
+          <div
+            id="collapseEight"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingEight"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <p><b>1/22 - 5/22</b></p>
+              <p>
+                In my CSCE 431 class (Software Engineering), my team of 6 worked
+                with the
+                <a
+                  href="https://maroonlink.tamu.edu/organization/asla"
+                  class="link-primary"
+                  target="_blank"
+                  >TAMU ASLA</a
+                >
+                student organization to develop their first site. The
+                <a
+                  href="https://tamu-asla.herokuapp.com/"
+                  class="link-primary"
+                  target="_blank"
+                  >website</a
+                >
+                we produced had several features. Our website had a point system
+                in which members could receive points for attending different
+                events (after entering the event code into the website). Our
+                website also had a newsletter system so officers could keep
+                their members updated on the latest TAMU ASLA news. In this
+                project, I served as the scrum master. Some of my duties
+                included leading the daily stand-ups and the sprint
+                retrospectives.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingNine">
+            <button
+              class="accordion-button collapsed shadow-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseNine"
+              aria-expanded="false"
+              aria-controls="collapseNine"
+            >
+              COVID Tracker
+            </button>
+          </h2>
+          <div
+            id="collapseNine"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingNine"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <p><b>4/20/20 - 4/24/20</b></p>
+              <p>
+                As part of the Aggie Against Covid competition, my team of 4
+                developed a tool to help doctors track covid outbreaks in their
+                city. This tool used the
+                <a
+                  href="https://www.isabelhealthcare.com/"
+                  class="link-primary"
+                  target="_blank"
+                  >Isabel Symptom Checker</a
+                >
+                and a google form in order to get information about which
+                regions of the city need the most medical staff and supplies.
+              </p>
+              <div class="iframe-container">
+                <iframe
+                  class="responsive-iframe"
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/bNsBfRiSjS4"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include('footer') %>
+  </body>
+</html>

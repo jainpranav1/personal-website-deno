@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('bootstrap') %>
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+      }
+
+      .content {
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <%- include('navbar') %>
+    <div class="container content mt-3 mb-3">
+      <h1>Work Experience</h1>
+      <div class="accordion mt-3" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed shadow-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Capital One - TIP Intern
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <p><b>6/6/22 - 8/12/22</b></p>
+              <p>
+                I worked in-person as a full-time, paid computer science intern
+                for 40 hours per week for 10 weeks in Plano, TX. I really
+                enjoyed my experience.
+              </p>
+              <p>
+                I worked with three other interns on the Solution Catalog
+                project. This project was inspired by the following problem.
+                Business analysts (BA) and product owners (PO) would not be able
+                to independently view and edit the eligibility rules of
+                different capital one solutions. Instead, they would need to ask
+                software engineers to perform these tasks for them using SQL
+                scripts. The goal of this project was to develop a website that
+                enabled BAs and POs to view and edit these rules themselves.
+              </p>
+              <p>
+                Throughout my internship, I worked on the frontend side of the
+                Solution Catalog project. I used
+                <a
+                  href="https://nodejs.org/en/"
+                  class="link-primary"
+                  target="_blank"
+                  >Node.js</a
+                >
+                as our runtime environment to run our code,
+                <a href="https://lit.dev/" class="link-primary" target="_blank"
+                  >Lit Element</a
+                >
+                for developing web components to reduce code, used
+                <a
+                  href="https://webpack.js.org/"
+                  class="link-primary"
+                  target="_blank"
+                  >Web Pack</a
+                >
+                as our bundler to reduce load time, used
+                <a
+                  href="https://webpack.js.org/"
+                  class="link-primary"
+                  target="_blank"
+                  >Type Script</a
+                >
+                as our programming language to reduce bugs, and used
+                <a
+                  href="https://axios-http.com/"
+                  class="link-primary"
+                  target="_blank"
+                  >Axios</a
+                >
+                as our http client in order to allow our frontend to communicate
+                with out backend. I also used
+                <a
+                  href="https://modern-web.dev/docs/test-runner/overview/"
+                  class="link-primary"
+                  target="_blank"
+                  >Web Test Runner</a
+                >
+                which made use of
+                <a
+                  href="https://playwright.dev/"
+                  class="link-primary"
+                  target="_blank"
+                  >Playwright</a
+                >
+                and
+                <a
+                  href="https://sinonjs.org/"
+                  class="link-primary"
+                  target="_blank"
+                  >Sinon.js</a
+                >
+                for developing unit tests.
+              </p>
+
+              <p>
+                Apart from development, I had lots of fun attending different
+                Capital One events and meeting other Capital One interns and
+                employees. I especially enjoyed our final intern celebration in
+                which all the interns were flown out to the headquarters of
+                Capital One in Mclean, Virginia.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button
+              class="accordion-button collapsed shadow-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="false"
+              aria-controls="collapseOne"
+            >
+              Takeda - Computer Science Intern
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <p><b>6/1/21 - 8/20/21</b></p>
+
+              <p>
+                I worked remotely as a full-time, paid computer science intern
+                for 40 hours per week for 12 weeks. Overall, I had a really
+                great experience. I met a alot of different types of people,
+                including a consultant, product manager, and technical lead. I
+                also worked on the following projects:
+              </p>
+
+              <p>
+                <b>myPKFiT Isitup project:</b>
+                I developed a Node JS based tool that can check the login page
+                status of the myPKFiT site for over 50 countries every 15
+                minutes. Before this tool, the myPKFiT team would only know
+                about login issues after their users had already experienced
+                them. My program allowed the team to know about and fix issues
+                before users experience them, providing a better site experience
+                for users.
+              </p>
+
+              <p>
+                <b>HCP Specification Documentation:</b>
+                Along with a fellow intern, I developed a document containing
+                the functionalities and formatting data of the myPKFiT web
+                application for over 50 countries. To reduce human error in data
+                collection, I developed a Node JS based tool that automatically
+                extracted the formatting data for each country's web application
+                and placed the data into an excel file. This document was
+                presented to the myPKFiT quality team and now resides in the
+                myPKFiT technical file.
+              </p>
+
+              <p>
+                <b>myPKFiT Screenshot Automation Tool:</b>
+                I developed a tool that can automatically extract screenshots
+                from the myPKFiT site and add them to a word document. This tool
+                was developed to remove the need for manually collecting and
+                adding screenshots to user manuals, a process that took
+                approximately 3 hours per country. While my tool was only a
+                proof of concept, once fully extended by future developers, the
+                screenshot collection process will take 10-20 minutes and be
+                fully automated.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <%- include('footer') %>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%- include('bootstrap') %>
+        <style>
+            body {
+                display: flex;
+                min-height: 100vh;
+                flex-direction: column;
+            }
+
+            .content {
+                flex-grow: 1;
+            }
+        </style>
+</head>
+
+<body>
+    <%- include('navbar') %>
+        <div class="container content mt-3 mb-3">
+            <h1>Volunteering</h1>
+            <div class="accordion mt-3" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Capital One Coders - Mentor
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p><b>6/28/22 - 7/7/22</b></p>
+                            <p>
+                                I taught middle school students how to build their own website using HTML and CSS. We
+                                used <a href="https://glitch.com/" class="link-primary" target="_blank">Glitch</a> in
+                                order to create the websites. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Christ's Kitchen - Volunteer
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p><b>1/20</b></p>
+                            <p>
+                                I helped cook & serve free meals to over 300 individuals. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Promise Pointe - Volunteer
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p><b>12/19 - 1/20, 12/20</b></p>
+                            <p>
+                                During the winter break of 2019, I caulked the walls and roof of a house that would
+                                eventually be inhabited by a formerly homeless individual. During the winter break of
+                                2020, I painted a forest mural on a 40 by 8 feet storage container for Promise
+                                Pointe, a residential community organization for the formerly homeless of the Victoria
+                                area. I spent a total of 61 hours painting this mural. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            Vitality Court - Volunteer
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <p><b>12/19 - 1/20</b></p>
+                            <p>
+                                During the winter break of 2019, I played several styles of piano music for senior
+                                residents during their dinnertime. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('footer') %>
+</body>
+
+</html>
