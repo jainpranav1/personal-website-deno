@@ -5,21 +5,21 @@ const router: Router = new Router();
 
 router.get("/logo_small.png", async (context) => {
   await context.send({
-    root: `${Deno.cwd()}/images`,
+    root: "images",
     index: "logo_small.png"
   });
 });
 
 router.get("/plant_cell.png", async (context) => {
   await context.send({
-    root: `${Deno.cwd()}/images`,
+    root: "images",
     index: "plant_cell.png"
   });
 });
 
 router.get("/pranav_pic.jpg", async (context) => {
   await context.send({
-    root: `${Deno.cwd()}/images`,
+    root: "images",
     index: "pranav_pic.jpg"
   });
 });
