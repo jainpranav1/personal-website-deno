@@ -1,12 +1,36 @@
-import express from "npm:express@4.18.2";
-import { Application, Request, Response } from "npm:@types/express@4.17.15";
+import { Application, Router } from "https://deno.land/x/oak@v12.5.0/mod.ts";
 import { renderFileToString } from "https://deno.land/x/dejs@0.10.3/mod.ts";
 
-const app: Application = express();
+const router: Router = new Router();
 
-app.get("/", async (_req: Request, res: Response) => {
-  const output: string = await renderFileToString("views/home.ejs", {});
-  res.send(output);
+router.get("/logo_small.png", async (context) => {
+  await context.send({
+    root: `${Deno.cwd()}/images`,
+    index: "logo_small.png"
+  });
 });
 
-app.listen(8000);
+router.get("/plant_cell.png", async (context) => {
+  await context.send({
+    root: `${Deno.cwd()}/images`,
+    index: "plant_cell.png"
+  });
+});
+
+router.get("/pranav_pic.jpg", async (context) => {
+  await context.send({
+    root: `${Deno.cwd()}/images`,
+    index: "pranav_pic.jpg"
+  });
+});
+
+router.get("/", async (context) => {
+  const output: string = await renderFileToString("views/home.ejs", {});
+  context.response.body = output;
+});
+
+const app = new Application();
+app.use(router.routes());
+app.use(router.allowedMethods());
+
+await app.listen({ port: 8000 });
