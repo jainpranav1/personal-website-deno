@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <%- include('bootstrap') %>
+  <%- await include('views/bootstrap.ejs', {}) %>
 
     <style>
       body {
@@ -43,7 +43,7 @@
 </head>
 
 <body>
-  <%- include('navbar') %>
+  <%- await include('views/navbar.ejs', {}) %>
     <div class="container mb-3 content img-text-container">
       <img src="/pranav_pic.jpg" class="rounded pranav-pic mt-3" />
       <div class="text-container mt-3">
@@ -57,7 +57,7 @@
         </div>
       </div>
     </div>
-    <%- include('footer') %>
+    <%- await include('views/footer.ejs', {}) %>
 </body>
 
 </html>
