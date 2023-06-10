@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <%- include('bootstrap') %>
+    <%- await include('views/bootstrap.ejs', {}) %>
         <style>
             body {
                 display: flex;
@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <%- include('navbar') %>
+    <%- await include('views/navbar.ejs', {}) %>
         <div class="container content mt-3 mb-3">
             <h1>Volunteering</h1>
             <div class="accordion mt-3" id="accordionExample">
@@ -94,7 +94,7 @@
                 </div>
             </div>
         </div>
-        <%- include('footer') %>
+        <%- await include('views/footer.ejs', {}) %>
 </body>
 
 </html>

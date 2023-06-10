@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <%- include('bootstrap') %>
+
+<head>
+  <%- await include('views/bootstrap.ejs', {}) %>
     <style>
       body {
         display: flex;
@@ -13,32 +14,22 @@
         flex-grow: 1;
       }
     </style>
-  </head>
+</head>
 
-  <body>
-    <%- include('navbar') %>
+<body>
+  <%- await include('views/navbar.ejs', {}) %>
     <div class="container content mt-3 mb-3">
       <h1>Work Experience</h1>
       <div class="accordion mt-3" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
-            <button
-              class="accordion-button collapsed shadow-none"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseTwo"
-              aria-expanded="false"
-              aria-controls="collapseTwo"
-            >
+            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               Capital One - TIP Intern
             </button>
           </h2>
-          <div
-            id="collapseTwo"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample"
-          >
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <p><b>6/6/22 - 8/12/22</b></p>
               <p>
@@ -59,59 +50,23 @@
               <p>
                 Throughout my internship, I worked on the frontend side of the
                 Solution Catalog project. I used
-                <a
-                  href="https://nodejs.org/en/"
-                  class="link-primary"
-                  target="_blank"
-                  >Node.js</a
-                >
+                <a href="https://nodejs.org/en/" class="link-primary" target="_blank">Node.js</a>
                 as our runtime environment to run our code,
-                <a href="https://lit.dev/" class="link-primary" target="_blank"
-                  >Lit Element</a
-                >
+                <a href="https://lit.dev/" class="link-primary" target="_blank">Lit Element</a>
                 for developing web components to reduce code, used
-                <a
-                  href="https://webpack.js.org/"
-                  class="link-primary"
-                  target="_blank"
-                  >Web Pack</a
-                >
+                <a href="https://webpack.js.org/" class="link-primary" target="_blank">Web Pack</a>
                 as our bundler to reduce load time, used
-                <a
-                  href="https://webpack.js.org/"
-                  class="link-primary"
-                  target="_blank"
-                  >Type Script</a
-                >
+                <a href="https://webpack.js.org/" class="link-primary" target="_blank">Type Script</a>
                 as our programming language to reduce bugs, and used
-                <a
-                  href="https://axios-http.com/"
-                  class="link-primary"
-                  target="_blank"
-                  >Axios</a
-                >
+                <a href="https://axios-http.com/" class="link-primary" target="_blank">Axios</a>
                 as our http client in order to allow our frontend to communicate
                 with out backend. I also used
-                <a
-                  href="https://modern-web.dev/docs/test-runner/overview/"
-                  class="link-primary"
-                  target="_blank"
-                  >Web Test Runner</a
-                >
+                <a href="https://modern-web.dev/docs/test-runner/overview/" class="link-primary" target="_blank">Web
+                  Test Runner</a>
                 which made use of
-                <a
-                  href="https://playwright.dev/"
-                  class="link-primary"
-                  target="_blank"
-                  >Playwright</a
-                >
+                <a href="https://playwright.dev/" class="link-primary" target="_blank">Playwright</a>
                 and
-                <a
-                  href="https://sinonjs.org/"
-                  class="link-primary"
-                  target="_blank"
-                  >Sinon.js</a
-                >
+                <a href="https://sinonjs.org/" class="link-primary" target="_blank">Sinon.js</a>
                 for developing unit tests.
               </p>
 
@@ -127,23 +82,13 @@
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
-            <button
-              class="accordion-button collapsed shadow-none"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseOne"
-              aria-expanded="false"
-              aria-controls="collapseOne"
-            >
+            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
               Takeda - Computer Science Intern
             </button>
           </h2>
-          <div
-            id="collapseOne"
-            class="accordion-collapse collapse"
-            aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample"
-          >
+          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
             <div class="accordion-body">
               <p><b>6/1/21 - 8/20/21</b></p>
 
@@ -194,6 +139,7 @@
         </div>
       </div>
     </div>
-    <%- include('footer') %>
-  </body>
+    <%- await include('views/footer.ejs', {}) %>
+</body>
+
 </html>

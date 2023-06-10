@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <%- include('bootstrap') %>
+  <%- await include('views/bootstrap.ejs', {}) %>
     <!-- Quiz from: https://www.jetpunk.com/quizzes/multiple-choice-general-knowledge-1 -->
     <style>
       body {
@@ -332,7 +332,7 @@
 </head>
 
 <body>
-  <%- include('navbar') %>
+  <%- await include('views/navbar.ejs', {}) %>
     <div class="container content mt-3 mb-3 main-container">
       <div class="coverup-controls">
         <div id="first-controls" class="control-block"></div>
@@ -445,7 +445,7 @@
         </form>
       </div>
     </div>
-    <%- include('footer') %>
+    <%- await include('views/footer.ejs', {}) %>
 </body>
 
 </html>

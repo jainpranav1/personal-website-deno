@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <%- include('bootstrap') %>
+  <%- await include('views/bootstrap.ejs', {}) %>
     <script src="//unpkg.com/force-graph"></script>
     <script src="//unpkg.com/element-resize-detector/dist/element-resize-detector.min.js"></script>
 
@@ -31,7 +31,7 @@
 </head>
 
 <body>
-  <%- include('navbar') %>
+  <%- await include('views/navbar.ejs', {}) %>
     <div class="container content mt-3 mb-3">
       <div class="text-container">
         <ul>
@@ -176,7 +176,7 @@
         }
       );
     </script>
-    <%- include('footer') %>
+    <%- await include('views/footer.ejs', {}) %>
 </body>
 
 </html>

@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-  <%- include('bootstrap') %>
+  <%- await include('views/bootstrap.ejs', {}) %>
     <style>
       body {
         display: flex;
@@ -31,7 +31,7 @@
 </head>
 
 <body>
-  <%- include('navbar') %>
+  <%- await include('views/navbar.ejs', {}) %>
     <div class="container content mt-3 mb-3 canvas-container">
       <p>Click on boxes to reveal and hide answers</p>
       <canvas id="canvas"></canvas>
@@ -114,7 +114,7 @@
         });
       }
     </script>
-    <%- include('footer') %>
+    <%- await include('views/footer.ejs', {}) %>
 </body>
 
 </html>
