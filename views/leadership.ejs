@@ -14,6 +14,27 @@
             .content {
                 flex-grow: 1;
             }
+
+            .accordion-item {
+                border-color: black;
+                border-width: 3px;
+            }
+
+            .list-group-item {
+                border-color: black;
+                border-width: 2px;
+            }
+
+            .iframe-container {
+                max-width: 560px;
+                aspect-ratio: 16 / 9;
+            }
+
+            /* Then style the iframe to fit in the container div with full height and width */
+            .responsive-iframe {
+                width: 100%;
+                height: 100%;
+            }
         </style>
 </head>
 
@@ -26,18 +47,109 @@
                     <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
                             data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Aggie Coding Club - Workshop Officer OIT
+                            Aggie Coding Club - Workshop Officer
                         </button>
                     </h2>
                     <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                         data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            <p><b>5/22 - 12/22</b></p>
+                            <p><b>5/22 - 5/23</b></p>
                             <p>
-                                I am currently a Workshops Officer OIT (officer in training). I am designing fun and
-                                useful computer science workshops for the Aggie Coding Club. These workshops will be
-                                held in the Fall 2022 semester.
+                                Since high school, I have had a passion for teaching others. I am always filled with a
+                                great sense of fulfillment when I help my peers experience an aha moment. My love for
+                                sharing knowledge led me to pursue a teaching role as a workshops officer for Aggie
+                                Coding Club during my senior year of college. My role in the club was to develop and
+                                present beginner friendly workshops that teach valuable computer science skills to the
+                                students of Texas A&M. I developed or co-developed the following workshops.
                             </p>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <p><b>Git Workshop</b></p>
+                                    <p>This workshop taught the basics of git. Students could choose to
+                                        either play the git learning game <a href="https://ohmygit.org/"
+                                            class="link-primary" target="_blank">Oh My Git</a> or follow along with a
+                                        git learning YouTube playlist I made (shown below). The playlist made use of the
+                                        Git Visualizer, a vscode extension that I developed. You can read more about the
+                                        extension on the <a href="/projects" class="link-primary">projects page</a>.
+                                    </p>
+                                    <div class="iframe-container">
+                                        <iframe class="responsive-iframe" width="560" height="315"
+                                            src="https://www.youtube.com/embed/videoseries?list=PLIE4A6CxQngvjPKGJu1pKPeI6HjxhEVGY"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <p><b>React Workshop</b></p>
+                                    <p>This workshop explained how to create a simple react website. The
+                                        workshop was delivered at Howdy Hack 2022.</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <p><b>Discord Bot Workshop</b></p>
+                                    <p>This workshop explained how to create a discord bot. The particular discord bot
+                                        created in the workshop could speak like a character or person using <a
+                                            href="https://uberduck.ai/" class="link-primary"
+                                            target="_blank">UberDuck</a>. Students followed along with a discord bot
+                                        YouTube playlist I made (shown below).
+                                    </p>
+                                    <div class="iframe-container">
+                                        <iframe class="responsive-iframe" width="560" height="315"
+                                            src="https://www.youtube.com/embed/videoseries?list=PLIE4A6CxQngv07ovFr-ZgBlhrDJAOBN1e"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                            allowfullscreen></iframe>
+                                    </div>
+                                </li>
+                                <li class="list-group-item">
+                                    <p><b>Discord Bot Competition</b></p>
+                                    <p>The Workshop Team held a month long competition where teams were tasked with
+                                        building a discord bot to represent a character (from a movie, game, cartoon,
+                                        etc.) or a person. For this competition, I developed the <a
+                                            href="https://docs.google.com/document/d/1To0tDyOtDB8DQFWeYe7LBrZ7Mj0-S56GLzWjf-ssuDY/edit?usp=sharing"
+                                            class="link-primary" target="_blank">rules</a> and <a
+                                            href="https://docs.google.com/presentation/d/1WdcWpXY7CkI06ekH9CSrpUG1a9WGC-4BR2m9wXpJNvg/edit?usp=sharing"
+                                            class="link-primary" target="_blank">winner presentation</a>. The
+                                        prizes of the competition were Amazon gift
+                                        cards ranging from $25 to $100.</p>
+                                </li>
+                                <li class="list-group-item">
+                                    <p><b>Web Scraper Workshop</b></p>
+                                    <p>This workshop explained how to create a web scraper. The workshop was inspired
+                                        the <a
+                                            href="https://youtube.com/playlist?list=PLibNZv5Zd0dwjZFCTVZ8QdKq194CkwXjo"
+                                            class="link-primary" target="_blank">Wired Autcomplete interviews</a>. The
+                                        particular web scraper developed in the workshop could automatically collect
+                                        Google searches about a specified famous person. Students followed along with
+                                        these <a
+                                            href="https://docs.google.com/presentation/d/1PwKym2OMC_MOfq2S5EpJRltBjwZ4URRNBsemzlq5uE4/edit?usp=sharing"
+                                            class="link-primary" target="_blank">slides</a> during a live code along.
+                                    </p>
+                                </li>
+                                <li class="list-group-item">
+                                    <p><b>Google Extension Workshop</b></p>
+                                    <p>This workshop explained how to create a google extension. This project was
+                                        inspired by the 20-20-20 rule, a technique to prevent digital eye strain by
+                                        looking away from your computer at an object 20 feet away for 20 seconds every
+                                        20 minutes. The particular google extension developed in the workshop would
+                                        remind you to look away from your screen according to the 20-20-20 rule.
+                                        Students followed along with these <a
+                                            href="https://docs.google.com/presentation/d/1s1hOsPo5vS3C8TzruPW_6xpTqV8-0evUSZcuLqY_jA8/edit?usp=sharing"
+                                            class="link-primary" target="_blank">slides</a> during a live code along.
+                                    </p>
+                                </li>
+                                <li class="list-group-item">
+                                    <p><b>Debugging Workshop</b></p>
+                                    <p>This workshop focused on the topic of debugging. The workshop taught the types of
+                                        programming errors, different debugging techniques, and how to use a debugger.
+                                        Students followed along with these <a
+                                            href="https://docs.google.com/presentation/d/1AmenoeIJ14TUWfJIAF70DppToHmkeyzPmJ_mdfnhesg/edit?usp=sharing"
+                                            class="link-primary" target="_blank">slides</a>. Near the end of the
+                                        workshop, students participated in a pair debugging activity where one partner
+                                        introduced a bug and the other partner would try to find it.
+                                    </p>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
