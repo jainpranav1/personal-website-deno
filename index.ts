@@ -49,11 +49,6 @@ router.get("/blockify", async (context) => {
   context.response.body = output;
 });
 
-router.get("/cover_up", async (context) => {
-  const output: string = await renderFileToString("views/cover_up.ejs", {});
-  context.response.body = output;
-});
-
 router.get("/git_visualizer", async (context) => {
   const output: string = await renderFileToString("views/git_visualizer.ejs", {});
   context.response.body = output;
