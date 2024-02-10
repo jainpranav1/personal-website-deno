@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <%- await include('views/bootstrap.ejs', {}) %>
+  <head>
+    <%- await include('views/bootstrap.ejs', {}) %>
     <style>
       body {
         display: flex;
@@ -25,22 +24,96 @@
         border-width: 2px;
       }
     </style>
-</head>
+  </head>
 
-<body>
-  <%- await include('views/navbar.ejs', {}) %>
+  <body>
+    <%- await include('views/navbar.ejs', {}) %>
     <div class="container content mt-3 mb-3">
       <h1>Work Experience</h1>
       <div class="accordion mt-3" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <button
+              class="accordion-button collapsed shadow-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
               Capital One - TIP Intern
             </button>
           </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-            data-bs-parent="#accordionExample">
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingThree"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="accordion-body">
+              <p><b>6/6/23 - 8/12/23</b></p>
+              <p>
+                I worked in-person as a full-time, paid computer science intern
+                for 40 hours per week for 10 weeks in Plano, TX. This was my
+                second internship at Capital One. I fully enjoyed my internship.
+              </p>
+              <p>
+                I worked with four other interns on InfluxGen, which aimed to
+                solve the following problem. The Marketing Navigator team wanted
+                a tool that allowed them to develop data pipelines for any
+                distributed processing framework (Apache Spark, Apache Flink,
+                Google Cloud Dataflow Runner, etc.) without code (using only a
+                JSON file). Unfortunately, the tool that they had only allowed
+                them to develop data pipelines for Apache Spark without code.
+                Consequently, the team could not make use of the different
+                advantages that each distributed processing framework provided.
+                The goal of InfluxGen was to develop a tool that allowed the
+                team to develop data pipelines without code for any distributed
+                processing framework. During my internship, I made use of
+                <a
+                  href="https://beam.apache.org/"
+                  class="link-primary"
+                  target="_blank"
+                  >Apache Beam</a
+                >
+                which enabled the development of data pipelines for any
+                distributed processing framework with code and
+                <a href="https://lit.dev/" class="link-primary" target="_blank"
+                  >Java</a
+                >
+                as the programming language.
+              </p>
+              <p>
+                Outside of work, I enjoyed participating in a company hackathon.
+                Here, I worked with another intern to develop a NodeJS app that
+                helped developers record code snippets alongside output while
+                debugging, allowing programmers to debug without forgetting
+                previous findings. I also enjoyed exercising and playing
+                basketball with others at the Capital One gym and swimming at
+                the Frisco Athletic center.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button
+              class="accordion-button collapsed shadow-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              Capital One - TIP Intern
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingTwo"
+            data-bs-parent="#accordionExample"
+          >
             <div class="accordion-body">
               <p><b>6/6/22 - 8/12/22</b></p>
               <p>
@@ -61,23 +134,59 @@
               <p>
                 Throughout my internship, I worked on the frontend side of the
                 Solution Catalog project. I used
-                <a href="https://nodejs.org/en/" class="link-primary" target="_blank">Node.js</a>
+                <a
+                  href="https://nodejs.org/en/"
+                  class="link-primary"
+                  target="_blank"
+                  >Node.js</a
+                >
                 as our runtime environment to run our code,
-                <a href="https://lit.dev/" class="link-primary" target="_blank">Lit Element</a>
+                <a href="https://lit.dev/" class="link-primary" target="_blank"
+                  >Lit Element</a
+                >
                 for developing web components to reduce code, used
-                <a href="https://webpack.js.org/" class="link-primary" target="_blank">Web Pack</a>
+                <a
+                  href="https://webpack.js.org/"
+                  class="link-primary"
+                  target="_blank"
+                  >Web Pack</a
+                >
                 as our bundler to reduce load time, used
-                <a href="https://webpack.js.org/" class="link-primary" target="_blank">Type Script</a>
+                <a
+                  href="https://webpack.js.org/"
+                  class="link-primary"
+                  target="_blank"
+                  >Type Script</a
+                >
                 as our programming language to reduce bugs, and used
-                <a href="https://axios-http.com/" class="link-primary" target="_blank">Axios</a>
+                <a
+                  href="https://axios-http.com/"
+                  class="link-primary"
+                  target="_blank"
+                  >Axios</a
+                >
                 as our http client in order to allow our frontend to communicate
                 with out backend. I also used
-                <a href="https://modern-web.dev/docs/test-runner/overview/" class="link-primary" target="_blank">Web
-                  Test Runner</a>
+                <a
+                  href="https://modern-web.dev/docs/test-runner/overview/"
+                  class="link-primary"
+                  target="_blank"
+                  >Web Test Runner</a
+                >
                 which made use of
-                <a href="https://playwright.dev/" class="link-primary" target="_blank">Playwright</a>
+                <a
+                  href="https://playwright.dev/"
+                  class="link-primary"
+                  target="_blank"
+                  >Playwright</a
+                >
                 and
-                <a href="https://sinonjs.org/" class="link-primary" target="_blank">Sinon.js</a>
+                <a
+                  href="https://sinonjs.org/"
+                  class="link-primary"
+                  target="_blank"
+                  >Sinon.js</a
+                >
                 for developing unit tests.
               </p>
 
@@ -93,13 +202,23 @@
         </div>
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button collapsed shadow-none" type="button" data-bs-toggle="collapse"
-              data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            <button
+              class="accordion-button collapsed shadow-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="false"
+              aria-controls="collapseOne"
+            >
               Takeda - Computer Science Intern
             </button>
           </h2>
-          <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample">
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse"
+            aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample"
+          >
             <div class="accordion-body">
               <p><b>6/1/21 - 8/20/21</b></p>
 
@@ -114,39 +233,39 @@
                 <li class="list-group-item">
                   <p><b>myPKFiT Isitup project</b></p>
                   <p>
-                    I developed a Node JS based tool that can check the login page
-                    status of the myPKFiT site for over 50 countries every 15
-                    minutes. Before this tool, the myPKFiT team would only know
-                    about login issues after their users had already experienced
-                    them. My program allowed the team to know about and fix issues
-                    before users experience them, providing a better site experience
-                    for users.
+                    I developed a Node JS based tool that can check the login
+                    page status of the myPKFiT site for over 50 countries every
+                    15 minutes. Before this tool, the myPKFiT team would only
+                    know about login issues after their users had already
+                    experienced them. My program allowed the team to know about
+                    and fix issues before users experience them, providing a
+                    better site experience for users.
                   </p>
                 </li>
                 <li class="list-group-item">
                   <p><b>HCP Specification Documentation</b></p>
                   <p>
-                    Along with a fellow intern, I developed a document containing
-                    the functionalities and formatting data of the myPKFiT web
-                    application for over 50 countries. To reduce human error in data
-                    collection, I developed a Node JS based tool that automatically
-                    extracted the formatting data for each country's web application
-                    and placed the data into an excel file. This document was
-                    presented to the myPKFiT quality team and now resides in the
-                    myPKFiT technical file.
+                    Along with a fellow intern, I developed a document
+                    containing the functionalities and formatting data of the
+                    myPKFiT web application for over 50 countries. To reduce
+                    human error in data collection, I developed a Node JS based
+                    tool that automatically extracted the formatting data for
+                    each country's web application and placed the data into an
+                    excel file. This document was presented to the myPKFiT
+                    quality team and now resides in the myPKFiT technical file.
                   </p>
                 </li>
                 <li class="list-group-item">
                   <p><b>myPKFiT Screenshot Automation Tool</b></p>
                   <p>
-                    I developed a tool that can automatically extract screenshots
-                    from the myPKFiT site and add them to a word document. This tool
-                    was developed to remove the need for manually collecting and
-                    adding screenshots to user manuals, a process that took
-                    approximately 3 hours per country. While my tool was only a
-                    proof of concept, once fully extended by future developers, the
-                    screenshot collection process will take 10-20 minutes and be
-                    fully automated.
+                    I developed a tool that can automatically extract
+                    screenshots from the myPKFiT site and add them to a word
+                    document. This tool was developed to remove the need for
+                    manually collecting and adding screenshots to user manuals,
+                    a process that took approximately 3 hours per country. While
+                    my tool was only a proof of concept, once fully extended by
+                    future developers, the screenshot collection process will
+                    take 10-20 minutes and be fully automated.
                   </p>
                 </li>
               </ul>
@@ -156,6 +275,5 @@
       </div>
     </div>
     <%- await include('views/footer.ejs', {}) %>
-</body>
-
+  </body>
 </html>

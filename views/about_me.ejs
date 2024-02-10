@@ -1,67 +1,95 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <%- await include('views/bootstrap.ejs', {}) %>
-        <style>
-            body {
-                display: flex;
-                min-height: 100vh;
-                flex-direction: column;
-                background-image: linear-gradient(lightskyblue, white);
-            }
+    <style>
+      body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+        background-image: linear-gradient(lightskyblue, white);
+      }
 
-            .content {
-                flex-grow: 1;
-            }
-        </style>
-</head>
+      .content {
+        flex-grow: 1;
+      }
+    </style>
+  </head>
 
-<body>
+  <body>
     <%- await include('views/navbar.ejs', {}) %>
-        <div class="container content mt-3 mb-3">
-            <h1>About Me</h1>
-            <p>
-                Howdy! Thank you for taking the time to visit my site. My name is Pranav Jain and I am passionate about
-                computer science. I graduated from Texas A&M in 2023 with a B.S. in Computer Science. I will be pursuing
-                a M.S. in Computer Science at Columbia University to become proficient at computer science research.
-            </p>
-            <p>
-                Since I was young, I have always enjoyed building stuff. In middle school, I would spend my weekends
-                following build tutorials by Steve Spangler and Kip Kay on Youtube. In high school, I took the game
-                design and robotics courses offered by my high school. This passion for making led me to explore
-                programming in my senior year of high school through udemy and coursera. I found programming fascinating
-                because I could create incredible projects solely with my computer. After taking another programming
-                class in my freshman year at Texas A&M, I was certain that I wanted to focus on computer science in my
-                future career. This led me to pursue computer science as my college major.
-            </p>
-            <p>
-                During my time at Texas A&M, I had lots of fun. I loved learning about computer science theory from my
-                professors. With my discrete mathematics professor Dr. Carlisle, I delved into the world of mathematical
-                logic, learning how to prove mathematical statements in clever and intuitive ways. With my computer
-                organization professor, Dr. Tyagi, I started with simple logic gates and built up to an entire computer.
-                I also loved putting the computer science theory into practice in summer internships. At Takeda and
-                Capital One, I enjoyed developing software projects that helped others at the company to work more
-                efficiently. I also loved sharing my computer science knowledge with my peers. At Aggie Coding Club, I
-                developed and presented beginner-friendly workshops to teach valuable coding skills, such as git, web
-                scraping, and react. Within a seminar class, I delivered presentations on how to obtain and be
-                successful at an internship. Lastly, I loved my computer science peers and my professors. With my peers,
-                I enjoyed discussing different areas of computer science and collaborating on class projects and
-                hackathons. In office hours, my professors always made their best effort to answer questions I had
-                regarding computer science topics and would also be interested in learning about my future career.
-            </p>
+    <div class="container content mt-3 mb-3">
+      <h1>About Me</h1>
+      <p>
+        Howdy! Thank you for taking the time to visit my site. My name is Pranav
+        Jain and I am passionate about computer science. I graduated from Texas
+        A&M in 2023 with a B.S. in Computer Science. I am pursuing a M.S. in
+        Computer Science at Columbia University to build my skills to become a
+        successful ML engineer.
+      </p>
+      <p>
+        Since I was young, I have always enjoyed building stuff. In middle
+        school, I would spend my weekends following build tutorials by Steve
+        Spangler and Kip Kay on Youtube. In high school, I took the game design
+        and robotics courses offered by my high school. This passion for making
+        led me to explore programming in my senior year of high school through
+        udemy and coursera. I found programming fascinating because I could
+        create incredible projects solely with my computer. After taking another
+        programming class in my freshman year at Texas A&M, I was certain that I
+        wanted to focus on computer science in my future career. This led me to
+        pursue computer science as my college major.
+      </p>
+      <p>
+        During my time at Texas A&M, I had lots of fun. I loved learning about
+        computer science theory from my professors. With my discrete mathematics
+        professor Dr. Carlisle, I delved into the world of mathematical logic,
+        learning how to prove mathematical statements in clever and intuitive
+        ways. With my computer organization professor, Dr. Tyagi, I started with
+        simple logic gates and built up to an entire computer. I also loved
+        putting the computer science theory into practice in summer internships.
+        At Takeda and Capital One, I enjoyed developing software projects that
+        helped others at the company to work more efficiently. I also loved
+        sharing my computer science knowledge with my peers. At Aggie Coding
+        Club, I developed and presented beginner-friendly workshops to teach
+        valuable coding skills, such as git, web scraping, and react. Within a
+        seminar class, I delivered presentations on how to obtain and be
+        successful at an internship. Lastly, I loved my computer science peers
+        and my professors. With my peers, I enjoyed discussing different areas
+        of computer science and collaborating on class projects and hackathons.
+        In office hours, my professors always made their best effort to answer
+        questions I had regarding computer science topics and would also be
+        interested in learning about my future career.
+      </p>
 
-            <p>
-                Currently, I am interning again at Capital One. I have set several goals for myself for this internship,
-                including becoming proficient in new technologies and maintaining a healthy work/life balance. After my
-                internship, I will be starting my M.S. at Columbia University. Here, I plan to choose the M.S. Thesis
-                track, where I will write a research thesis and then perform a thesis defense. My research focus is not
-                yet decided, but I am interested in performing research in machine learning, computer graphics,
-                cryptography, etc. After my masters degree, I may go directly into industry or pursue a PhD degree in
-                computer science.
-            </p>
-        </div>
-        <%- await include('views/footer.ejs', {}) %>
-</body>
-
+      <p>
+        Currently, I am pursing a masters at Columbia University to build my
+        skills to become a successful ML engineer. In short, an ML engineer is
+        focused on shipping a product using ML. In detail, an ML engineer
+        sources and cleans data, chooses an ML model for the data, trains and
+        tests a model with the data, deploys a well-performing model, connects
+        the model to data sources, monitors the model, and retrains the model if
+        necessary. A nice video about this career can be found
+        <a
+          href="https://www.youtube.com/watch?v=GDCnydDWRnM"
+          class="link-primary"
+          target="_blank"
+          >here</a
+        >. I decided on this job during my winter break from 2023-2024 for
+        several reasons. Firstly, I enjoy programming, working with ML models,
+        working with databases, and deploying and monitoring products. Secondly,
+        I like that there is a high demand and low supply of ML engineers and
+        that the pay of ML engineers is often quite high (check out
+        <a
+          href="https://www.youtube.com/watch?v=OhuduvuenYQ"
+          class="link-primary"
+          target="_blank"
+          >this</a
+        >
+        video for more information). After my masters, I plan to enter the
+        workforce and take on job roles that will build my skills so I
+        eventually become an ML engineer.
+      </p>
+    </div>
+    <%- await include('views/footer.ejs', {}) %>
+  </body>
 </html>
